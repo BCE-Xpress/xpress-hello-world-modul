@@ -1,0 +1,100 @@
+<dotnetnuke type="Package" version="5.0">
+  <packages>
+    <package name="Dnn.Xpress.HelloWorld" type="Module" version="00.00.01">
+      <friendlyName>Dnn.Xpress.HelloWorld</friendlyName>
+      <description>Dnn.Xpress.HelloWorld</description>
+      <iconFile>~/Icons/Sigma/Software_32X32_Standard.png</iconFile>
+      <owner>
+        <name>Xpress</name>
+        <organization>Xpress</organization>
+        <url>https://www.dnndev.me/</url>
+        <email>pali.andris@gmail.com</email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">09.08.00</dependency>
+      </dependencies>
+      <components>
+        <component type="Script">
+          <scripts>
+            <basePath>DesktopModules\MVC\Dnn.Xpress.HelloWorld</basePath>
+            <script type="Install">
+              <path>Providers\DataProviders\SqlDataProvider</path>
+              <name>00.00.01.SqlDataProvider</name>
+              <version>00.00.01</version>
+            </script>
+            <script type="UnInstall">
+              <path>Providers\DataProviders\SqlDataProvider</path>
+              <name>Uninstall.SqlDataProvider</name>
+              <version>00.00.01</version>
+            </script>
+          </scripts>
+        </component>
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath>DesktopModules/MVC/Dnn.Xpress.HelloWorld</basePath>
+            <resourceFile>
+              <name>Resources.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>Dnn.Xpress.HelloWorld</moduleName>
+            <foldername>Dnn.Xpress.HelloWorld</foldername>
+            <businessControllerClass>Xpress.Dnn.Dnn.Xpress.HelloWorld.Components.FeatureController</businessControllerClass>
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>Dnn.Xpress.HelloWorld</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>Xpress.Dnn.Dnn.Xpress.HelloWorld.Controllers/Item/Index.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>Edit</controlKey>
+                    <controlSrc>Xpress.Dnn.Dnn.Xpress.HelloWorld.Controllers/Item/Edit.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>Edit Content</controlTitle>
+                    <controlType>Edit</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                    <supportsPopUps>True</supportsPopUps>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>Settings</controlKey>
+                    <controlSrc>Xpress.Dnn.Dnn.Xpress.HelloWorld.Controllers/Settings/Settings.mvc</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>Dnn.Xpress.HelloWorld Settings</controlTitle>
+                    <controlType>Edit</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+        <component type="Assembly">
+          <assemblies>
+            <assembly>
+              <name>Dnn.Xpress.HelloWorld.dll</name>
+              <path>bin</path>
+            </assembly>
+          </assemblies>
+        </component>
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>
